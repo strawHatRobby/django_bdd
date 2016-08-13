@@ -1,11 +1,8 @@
 language: python
 services:
-– sqlite
+– "sqlite"
 python:
-– 3.5.1
-install:
-– pip install -r dev-requirements.txt
-before_script:
-– python manage.py syncdb –migrate –noinput
-script:
-– behave features
+– "3.5"
+install: "pip install -r dev-requirements.txt"
+before_script: "python manage.py syncdb –migrate –noinput"
+script: behave features
