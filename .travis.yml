@@ -1,6 +1,5 @@
 language: python
-services:
-– "sqlite"
+services: "sqlite"
 python:
 – "3.5"
 install: "pip install -r dev-requirements.txt"
