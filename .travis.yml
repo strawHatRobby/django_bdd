@@ -1,4 +1,10 @@
 language: python
 python: "3.5.1"
-install: "pip install -r dev-requirements.txt"
+before_install:
+  - "sudo apt-get update"
+  - "sudo apt-get install firefox"
+  - "sudo apt-get install xvfb"
+  - "sudo Xvfb :10 -ac"
+install:
+  - "pip install -r dev-requirements.txt"
 script: behave features
